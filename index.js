@@ -1,0 +1,1 @@
+console.table('Welcome to javascript');
