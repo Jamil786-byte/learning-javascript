@@ -1,16 +1,38 @@
-const text = "My name is jamil";
+// Q1:- Write a function to reverse a string;
+/*  let text = "happy interview";
+// output = weivretni yppah
+ 
+ let word = text.split(" ");
+ let output = "";
+ let reversed = "";
+ for (let i = word.length - 1; i >= 0; i--) {
+   output = word[i];
+   for (let j = output.length - 1; j >= 0; j--) {
+     reversed += output[j];
+   }
+   if (i > 0) {
+ 
+     reversed += " ";
+   }
+ }
+ console.log(reversed); */
 
-let words = text.split(" "); //["My name is jamil"]
-let output = "";
-for (let i = 0; i < words.length; i++) {
-  let reverseStr = words[i];
-  for (let j = reverseStr.length - 1; j >= 0; j--) {
-    output += reverseStr[j];
-  }
-  
-  if (i < words.length - 1) {
-    output += " "; // Add a space between words
-  }
-}
-
-console.log(output); // yM eman si limaj
+ let text = "happy interview";
+ let words = text.split(" ");
+ let reversedWord = "";
+ let result = "";
+ 
+ (function reverseStr(arrStr) {
+   for (let i = arrStr.length - 1; i >= 0; i--) {
+     reversedWord = arrStr[i];
+     for (let j = reversedWord.length - 1; j >= 0; j--) {
+       result += reversedWord[j];
+     }
+     if(i > 0){
+       result += " ";
+     }
+   }
+   console.log(result);
+   return result;
+ })(words);
+ 
