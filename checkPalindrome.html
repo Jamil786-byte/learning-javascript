@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a function to check given string is palindrome or not</title>
+</head>
+
+<body>
+    <script>
+        let word = "jamil";
+
+        (function checkPalindrome(word) {
+            let palindromeText = "";
+            for (let i = word.length - 1; i >= 0; i--) {
+                palindromeText += word[i];
+            }
+            if (word === palindromeText) {
+                console.log("Givern word is palindrome");
+            }else{
+                console.log("Givern word is not palindrome");
+            }
+        })(word);
+
+    </script>
+</body>
+
+</html>
