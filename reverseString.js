@@ -17,22 +17,22 @@
  }
  console.log(reversed); */
 
- let text = "happy interview";
- let words = text.split(" ");
- let reversedWord = "";
- let result = "";
+//  let text = "happy interview";
+//  let words = text.split(" ");
+//  let reversedWord = "";
+//  let result = "";
  
- (function reverseStr(arrStr) {
-   for (let i = arrStr.length - 1; i >= 0; i--) {
-     reversedWord = arrStr[i];
-     for (let j = reversedWord.length - 1; j >= 0; j--) {
-       result += reversedWord[j];
-     }
-     if(i > 0){
-       result += " ";
-     }
-   }
-   console.log(result);
-   return result;
- })(words);
+//  (function reverseStr(arrStr) {
+//    for (let i = arrStr.length - 1; i >= 0; i--) {
+//      reversedWord = arrStr[i];
+//      for (let j = reversedWord.length - 1; j >= 0; j--) {
+//        result += reversedWord[j];
+//      }
+//      if(i > 0){
+//        result += " ";
+//      }
+//    }
+//    console.log(result);
+//    return result;
+//  })(words);
  
