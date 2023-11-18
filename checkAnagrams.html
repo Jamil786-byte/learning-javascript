@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writ a function that checks whether two strings are anagrams or not</title>
+</head>
+
+<body>
+    <script>
+        function isAnagram(str1, str2) {
+            const word1 = str1.split("").sort().join("");
+            const word2 = str2.split("").sort().join("");
+            if (word1 == word2) {
+                console.log("word is anagram");
+            } else {
+                console.log("word is not anagram");
+            };
+        }
+
+        isAnagram("listen", "silent");
+    </script>
+</body>
+
+</html>
