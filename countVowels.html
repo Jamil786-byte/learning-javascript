@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Vowels</title>
+</head>
+
+<body>
+    <script>
+        let str = "Javascript are awesome";
+        let splitText = str.toLowerCase().split("");
+
+        function counVowels(splitText) {
+            let count = 0;
+            for(let i = 0; i < splitText.length; i++) {
+                if(splitText[i] === "a" || splitText[i] === "e" || splitText[i] === "i" || splitText[i] === "o" || splitText[i] === "u") {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+      const result = counVowels(splitText);
+      console.log(result);
+    </script>
+</body>
+
+</html>
