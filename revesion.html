@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision</title>
+</head>
+
+<body>
+    <script>
+        let txt = "my name is jamil ansari";
+        splitTxt = txt.split(" ");
+        console.log(splitTxt.length);
+        function maxWord(splitTxt) {
+            let max = splitTxt[0];
+            for (let i = 1; i < splitTxt.length; i++) { // i = 2 max = "name" splitTxt.length==5
+                if (max.length < splitTxt[i].length) {
+                    max = splitTxt[i];
+                }
+            }
+            return max;
+        }
+
+        let result = maxWord(splitTxt);
+        console.log(result);
+    </script>
+</body>
+
+</html>
