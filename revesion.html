@@ -9,21 +9,40 @@
 
 <body>
     <script>
-        let arr = [1, 3, 5, 9];
-        let missingNum = [];
+        let user = [{
+            id: 1,
+            name: "jamil",
+            age: 32
+        },
+        {
+            id: 2,
+            name: "petter",
+            age: 21
+        },
+        {
+            id: 3,
+            name: "Joe",
+            age: 30
+        }
+        ];
 
-        function findMissingNumber(arr) {
-            for (let i = 1; i <= arr.length + 1; i++) {
-                if (!arr.includes(i)) {
-                    missingNum.push(i);
+
+        function createAscendingOrder(data) {
+            for (let i = 0; i < data.length; i++) {
+                for (let j = 1; j < data.length; j++) {
+
+                    if (data[i].age < data[j].age) { // 32 < 21
+                        //swap i value to j and j value to i
+                        const temp = data[i];
+                        data[i] = data[j];
+                        data[j] = temp;
+                    }
                 }
             }
-
-            return missingNum;
+            return data;
         }
 
-        let result = findMissingNumber(arr);
-        console.log(result)
+        console.log(createAscendingOrder(user));
     </script>
 </body>
 
