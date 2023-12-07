@@ -9,40 +9,65 @@
 
 <body>
     <script>
-        let user = [{
-            id: 1,
-            name: "jamil",
-            age: 32
-        },
-        {
-            id: 2,
-            name: "petter",
-            age: 21
-        },
-        {
-            id: 3,
-            name: "Joe",
-            age: 30
-        }
-        ];
+        debugger;
+        const arr1 = ['54640225AIJR', '54640125AIJR']; // Your array
 
-
-        function createAscendingOrder(data) {
-            for (let i = 0; i < data.length; i++) {
-                for (let j = 1; j < data.length; j++) {
-
-                    if (data[i].age < data[j].age) { // 32 < 21
-                        //swap i value to j and j value to i
-                        const temp = data[i];
-                        data[i] = data[j];
-                        data[j] = temp;
-                    }
+        const data = {  // Your data object
+            "totalrecord": 19,
+            "data": [
+                {
+                    "vcNumber": "54640225AIJR",
+                    "description": null,
+                    "attribute": null,
+                    "bom": null,
+                    "featchedOn": "2023-12-06T14:52:47.026914",
+                    "user": "admin"
+                },
+                {
+                    "vcNumber": "54640125ANZR",
+                    "description": null,
+                    "attribute": null,
+                    "bom": null,
+                    "featchedOn": "2023-12-06T14:52:42.820799",
+                    "user": "admin"
+                },
+                {
+                    "vcNumber": "54640125AL3R",
+                    "description": null,
+                    "attribute": null,
+                    "bom": null,
+                    "featchedOn": "2023-12-06T14:52:38.629556",
+                    "user": "admin"
+                },
+                {
+                    "vcNumber": "54640125AIJR",
+                    "description": null,
+                    "attribute": null,
+                    "bom": null,
+                    "featchedOn": "2023-12-06T14:52:34.471958",
+                    "user": "admin"
+                },
+                {
+                    "vcNumber": "51230725000R",
+                    "description": null,
+                    "attribute": null,
+                    "bom": null,
+                    "featchedOn": "2023-12-06T14:52:30.164361",
+                    "user": "admin"
                 }
-            }
-            return data;
-        }
 
-        console.log(createAscendingOrder(user));
+            ],
+            "message": "requested Data send successfully!",
+            "status": 200
+        };
+
+        for (let i = 0; i < arr1.length; i++) {
+            if (data.data[i].vcNumber.includes(arr1[i])) {
+                console.log("true");
+            } else {
+                console.log("false");
+            }
+        }
     </script>
 </body>
 
