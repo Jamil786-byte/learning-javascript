@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference between forEach and map method</title>
+</head>
+
+<body>
+    <script>
+        /* map method ==>1) map method returns a new array without modifying the original array.
+        2) map method is used to transform the elements of an array.
+        
+        forEach method ==>1 forEach mothod do not return a new array its return undefined.
+        2) forEach method is used to to iterate the elements of an array.
+        */
+
+        //note ==> forEach method is faster than map method because forEach method does not return a new array
+
+        // let arr = [1, 2, 3, 4, 5, 6];
+
+        // let mapResult = arr.map((data, index) => {
+        //     console.log(index)
+        //     return data * 2;
+        // });
+
+        // console.log(mapResult);
+
+       let forEachData = arr.forEach((data)=>{
+           let output = data * 2;
+          return output;
+        });
+        console.log(forEachData);
+    </script>
+</body>
+
+</html>
