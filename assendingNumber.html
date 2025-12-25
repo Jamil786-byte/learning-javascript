@@ -10,17 +10,17 @@
 <body>
     <script>
         //assending order with number 
-        let arr = [4, 1, 3, 4, 2];
+        let arr = [4, 1, 3, 4, 2]; 
 
-        (function ascending() {
-            for (let i = 0; i < arr.length; i++) {
-                for (let j = i + 1; j < arr.length; j++) {
-                    // Swap arr[i] to arr[j];
+        (function ascending(nums) {
+            for (let i = 0; i < nums.length; i++) {
+                for (let j = i + 1; j < nums.length; j++) {
+                    // Swap nums[i] to nums[j];
                     // In the below if statement if you will use < symbols instead of > then output will be descending order
-                    if (arr[i] < arr[j]) {
-                        const temp = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = temp;
+                    if (nums[i] < nums[j]) {
+                        const temp = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = temp;
                     }
                 }
             }
