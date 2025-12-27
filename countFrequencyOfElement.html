@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript function to count the frequency of each element in an
+      array.
+    </title>
+  </head>
+
+  <body>
+    <script>
+      let input = ["a", "b", "a", "c", "b"];
+      let output = { a: 0, b: 0, c: 0 };
+      for (let i = 0; i < input.length; i++) {
+        if (input[i] === "a") {
+          output.a++;
+        } else if (input[i] === "b") {
+          output.b++;
+        } else if (input[i] === "c") {
+          output.c++;
+        }
+      }
+    </script>
+  </body>
+</html>
