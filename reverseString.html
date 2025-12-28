@@ -6,6 +6,19 @@
     <title>Reverse string</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      let str = "happy interview"; // weivretni yppah
+      let words = str.split(" ");
+      let result = "";
+
+      for (let i = words.length - 1; i >= 0; i--) {
+        let word = words[i];
+        for (let j = word.length - 1; j >= 0; j--) {
+          result += word[j];
+        }
+        if (i !== 0) result += " ";
+      }
+      console.log(result);
+    </script>
   </body>
 </html>
