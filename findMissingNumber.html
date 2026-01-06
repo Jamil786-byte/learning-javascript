@@ -11,10 +11,11 @@
     <script>
         let arr = [1, 2, 3, 4, 6, 9, 12];
         // here I got the largest number
-        let n = Math.max(...arr);
+        let maxNum = Math.max(...arr);
+        let minNum = Math.min(...arr);
         let missingNum = [];
 
-        for(let i = 1; i <= n; i++){
+        for(let i = minNum; i <= maxNum; i++){
             if(!arr.includes(i)){
                 missingNum.push(i);
             }
