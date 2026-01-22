@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,20 +8,102 @@
 
   <body>
     <script>
-      //  function sum(a, b){
-      //   return a + b;
-      //  }
-      //  let result = sum(2, 3);
-      //  console.log(result);
+      function register() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Registered successfully");
+            resolve();
+          }, 2000);
+        });
+      }
 
-      function sum(a){
-        return function (b){
-          return a + b;
+      function sendEmail() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Email sent successfully");
+            resolve();
+          }, 1000);
+        });
+      }
+
+      function login() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Login successful");
+            resolve();
+          }, 500);
+        });
+      }
+
+      function getUserData() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("User data received...");
+            resolve();
+          }, 300);
+        });
+      }
+
+      function displayUserData() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("user data displayed on screen");
+            resolve();
+          }, 1000);
+        });
+      }
+
+      // Callback Hell
+      // register(function () {
+      //   sendEmail(function () {
+      //     login(function () {
+      //       getUserData(function () {
+      //         displayUserData();
+      //       });
+      //     });
+      //   });
+      // });
+
+      // register()
+      //   .then(() => {
+      //     sendEmail().then(() => {
+      //       login().then(() => {
+      //         getUserData().then(() => {
+      //           displayUserData().then(() => {
+      //             console.log("All tasks completed successfully");
+      //           });
+      //         });
+      //       });
+      //     });
+      //   })
+      //   .catch((err) => {
+      //     console.log("Error:", err);
+      //   });
+
+      // register().
+      // then(sendEmail)
+      // .then(login)
+      // .then(getUserData)
+      // .then(displayUserData)
+      // .then(() => {
+      //   console.log("All tasks completed successfully");
+      // }).catch((err) =>{
+      //   console.log("Error:", err);
+      // })
+
+      async function performTasks() {
+        try {
+          await register();
+          await sendEmail();
+          await login();
+          await getUserData();
+          await displayUserData();
+        } catch (err) {
+          console.log("Error:", err);
         }
       }
-      let output = sum(2);
-      
-      console.log(output);
+      console.log("Others code runs...");
+      performTasks();
     </script>
   </body>
 </html>
