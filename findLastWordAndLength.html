@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find last word and length of the word</title>
+  </head>
+  <body>
+    <script>
+      let input = "Hello World my name   is     jamil   ";
+      // find the last word and length
+      let words = input.trim().split(" ");
+      let lastWord = words[words.length - 1];
+      let length = lastWord.length;
+      console.log(`Last word is ${lastWord} and length are ${length}`);
+    </script>
+  </body>
+</html>
